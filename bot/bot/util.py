@@ -1,6 +1,6 @@
 import discord , time
 
-async def speak_real(curr_guild):
+async def speak_real(curr_guild , source_name):
     most_members_vc = curr_guild.voice_channels[0]
     for vc in curr_guild.voice_channels:
         if len(vc.members) > len(most_members_vc.members):
