@@ -1,5 +1,6 @@
 /discordbot.db
 /init_DB.py
+/discord.log
 /bot/__pycache__
 /bot/bot/__pycache__
 /bot/models/__pycache__
