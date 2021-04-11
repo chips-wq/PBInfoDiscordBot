@@ -6,7 +6,7 @@ async def speak_real(curr_guild):
         if len(vc.members) > len(most_members_vc.members):
             most_members_vc = vc
     vc = await most_members_vc.connect()
-    vc.play(discord.FFmpegPCMAudio(executable=PATH_TO_EXEC , source=source_name))
+    vc.play(discord.FFmpegPCMAudio(executable="/usr/bin/ffmpeg" , source=source_name))
     # Sleep while audio is playing.
     while vc.is_playing():
         time.sleep(.1)

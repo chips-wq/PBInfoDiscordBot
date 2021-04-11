@@ -1,6 +1,6 @@
 import json
 config_json = None
-with open("B:\Orice Legat de Programare\github search for exercise\config.json" , 'r') as cfg:
+with open("/root/discord/config.json" , 'r') as cfg:
     json_cfg_str = cfg.read()
     config_json = json.loads(json_cfg_str)
 
