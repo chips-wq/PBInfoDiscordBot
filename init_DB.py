@@ -1,13 +1,6 @@
 import bot.db as db
 from bot.util import update_db
-
-"""
-
-```lua
-print('Hello, World!')```
-
-gives this (note that the language must be on the same line as the 3 initial backticks, with no other characters following it [including whitespace]).
-"""   
+ 
 from bot.config import auth , BASE_DIR
 
             
