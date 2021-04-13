@@ -42,7 +42,10 @@ class Problema_PBInfo:
         self.sursa = sursa
 
     def markdownify(self , content):
-        return markdownify.markdownify(content.replace("<code>" , "`").replace("</code>" , "`"))
+        markdownified_content = markdownify.markdownify(content.replace("<code>" , "`").replace("</code>" , "`"))
+        if len(markdownified_content) > 1024:
+            return markdownified_content[:1021]+"..."
+        return markdownified_content
 
     def __repr__(self):
         ret_str = f"{self.nume}#{self.cod}\n\n{self.description}\n\nCerinta\n{self.cerinta}"
