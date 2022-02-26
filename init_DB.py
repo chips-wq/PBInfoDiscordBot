@@ -3,13 +3,9 @@ from bot.util import update_db
  
 from bot.config import auth , BASE_DIR
 
-            
-
-"""
-db.c.execute("DROP TABLE githubfiles;")
-"""
+db.c.execute("""DROP TABLE IF EXISTS githubfiles""")
 db.c.execute("""
-CREATE TABLE IF NOT EXISTS githubfiles (
+CREATE TABLE githubfiles (
     id integer primary key,
     name text,
     path text,

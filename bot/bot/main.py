@@ -37,6 +37,13 @@ async def problema(ctx , name_of_exercise):
     else:
         await ctx.send(f"Ups!Am intampinat o eroare: {pbinfo_response.status_code}")
 
+
+@bot.bot.cavou_bot.client.command()
+async def test(ctx):
+    response = requests.get(BASE_DIR , auth=auth)
+    print(response.text)
+    await ctx.send("SALUT!")
+
 @bot.bot.cavou_bot.client.command()
 async def refresh(ctx):
     update_db(BASE_DIR , auth , db.c)
